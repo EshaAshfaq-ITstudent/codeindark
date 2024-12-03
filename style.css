@@ -1,0 +1,463 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensure all content is stacked vertically */
+    justify-content: flex-start; /* Align the content to the top */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    background-image: url(BACK.png);
+    background-size: cover;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 70px;
+}
+
+.logo {
+    background-image: url(LOGOCOMPETITIONWHITE-removebg-preview.png);
+    height: 60px;
+}
+
+.eve {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.eve p {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bo1, .bo2, .bo3 {
+    margin: 20px;
+    padding: 20px;
+    font-size: large;
+}
+.moving-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 5rem;
+    color: linear-gradient(135deg, white, #c19de4);
+    
+}
+
+
+.but button {
+    background: linear-gradient(135deg, white, #c19de4); /* White to light purple gradient */
+    color: #5C2D91; /* Dark purple text color */
+    padding: 15px 30px; /* Larger padding to make the button bigger */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Makes the button round */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect */
+.but button:hover {
+    background: linear-gradient(135deg, #D8B2FF, white); /* Reverse gradient on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+.te {
+    text-align: center;
+    color: white;
+    font-size: large;
+    margin-top: 110px;
+    padding-top: 20px;
+}
+
+.bus {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    text-align: center;       /* Center the text */
+    border: 2px solid purple;
+    border-radius: 2rem;
+    height: 40px;
+    width: 300px;
+    font-size: larger;
+    background-color: rgb(190, 52, 190);
+    margin: 0 auto;  
+}
+.card-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Add space between the cards */
+    margin-top: 150px; /* Add space between text and cards */
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s ease-in-out;
+}
+
+/* Style for the active (clicked) card to make it clear */
+.card.focused {
+    transform: scale(1.05); /* Slightly increase the size of the focused card */
+    filter: none; /* Remove blur */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply blur effect to non-focused cards */
+.card.blurred {
+    filter: blur(5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 16px;
+}
+        /* Partners Section */
+        .partners-section {
+            margin-top: 500px;
+            text-align: center;
+            margin: 40px 0;
+            color: white;
+            font-size: larger;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slideshow {
+            display: flex;
+            gap: 10px;
+            animation: scroll 15s linear infinite;
+        }
+
+        .slideshow img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+       .step{
+        color: white;
+        text-align: center;
+       }
+        /* Smooth Scrolling Animation */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .gif-cards-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .gif-card {
+            width: 250px;
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gif-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .gif-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .gif-card h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .gif-card p {
+            font-size: 0.9rem;
+            color: #ccc;
+            padding: 0 10px 20px;
+        }
+        petition-heading {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin: 40px 0;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 20px;
+            animation: scroll 20s linear infinite;
+        }
+
+        .card {
+            flex: 0 0 auto;
+            width: 250px;
+            background-color: #222;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Get Rule Book Section */
+        .rulebook-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .rulebook-section a {
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            background: #444;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .rulebook-section a:hover {
+            background: #666;
+        }
+
+        .rulebook-section a:after {
+            content: " ➡";
+        }
+
+        /* Animation for Cards */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .dare-to-create {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .box {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 48%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Left Box Styling */
+        .testimonial-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .testimonial-box img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-box p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .profile-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-info div {
+            text-align: left;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation-buttons button {
+            padding: 10px 15px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #666;
+        }
+
+        /* Right Box Styling */
+        .community-box {
+            text-align: center;
+        }
+
+        .community-box img {
+            width: 100%;
+            max-width: 200px;
+            margin: 20px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+    bottom: 0;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px; /* Ensures columns don't get too small */
+    padding: 10px;
+    margin: 10px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #D8B2FF;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #D8B2FF; /* Light purple on hover */
+}
+
+.footer-column p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* Random Number Styling */
+#random-num {
+    font-weight: bold;
+    font-size: 16px;
+    color: #FFD700; /* Golden color for the random number */
+}
+
+
+      
